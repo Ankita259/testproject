@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student</title>
+	<link rel="shortcut icon" href="Project/img/fevicon.ico">
+	<link rel="stylesheet" type="text/css" href="Project/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+	<style type="text/css">
+
+		body
+		{
+			background-image: url("Backgroundimg.jpg"); 
+		}
+		.upload
+		{
+			position: relative;
+			left:100px;
+			border-style: groove;
+			border-color: cadetblue;
+			border-width: 5px;
+			width:75%;
+			top: 100px;
+		}
+		.uphead
+		{
+			font-family: 'Patua One', cursive;
+			font-size: 150%;
+			padding-left: 10px;
+		}
+		#files
+		{
+			padding-left: 10px;
+			position: relative;
+			margin: 10px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+<div class="left">
+		<img src="Project/img/vgec.png" style=height:"30px" width="30px">
+		<p>Vishwakarma Gov. Engineering College</p>
+		</div>
+		<div class="right">
+		<p>Powered By: The Techsters</p>
+		</div>
+	</header>
+	<upper>
+		<ul>
+			<button id="1">Login</button>
+
+			<li><a href="#">Sign Up</a></li>
+			<li><a href="#">FAQS</a></li>
+		</ul>
+	</upper>
+	<br><br>
+
+
+
+<div class="upload"  >
+	<p class ="uphead" >Upload Completed Project/Assignment</p>
+
+<input type="file" id="files" name="files[]" multiple />
+<output id="list"></output>
+
+<script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>
+</div>
+
+<br><br>
+<div class="upload">
+
+	<p class ="uphead">Upload interesting project </p>
+	<input type="file" id="files" name="files[]" multiple />
+	<output id="list"></output>
+	<script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>
+</div>
+<p class ="uphead" style="position: relative;left: 100px; top: 100px;" >Grade Points : </p>
+<br>
+
+<div class="upload">
+	<a style="color: black" href=""><h2>Click here to open online test</h2></a>
+</div>
+<br><br>
+<div class="upload">
+    <p style="font-style: italic; font-size: 150%"><b>Ask the faculties </b> </p>
+    <button id="talk" style="margin: 7px"><a href="index.html" >Click here to chat</button>
+    
+ </div>
+
+
+</body>
+</html>
